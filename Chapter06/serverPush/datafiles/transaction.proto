@@ -1,0 +1,18 @@
+syntax = "proto3";
+package datafiles;
+
+message TransactionRequest {
+   string from = 1;
+   string to = 2;
+   float amount = 3;
+}
+
+message TransactionResponse {
+  string status = 1;
+  int32 step = 2;
+  string description = 3;
+}
+
+service MoneyTransaction {
+    rpc MakeTransaction(TransactionRequest) returns (stream TransactionResponse) {}
+}
