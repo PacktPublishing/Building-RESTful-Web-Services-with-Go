@@ -1,0 +1,181 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Kong",
+		"_postman_id": "fcf82a68-2043-5ed6-5229-62fe3355480f",
+		"description": "Set of API for kong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Kong GET apis",
+			"request": {
+				"url": "localhost:8001/apis",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Kong Add API",
+			"request": {
+				"url": "localhost:8001/apis",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"myapi\",\n\t\"hosts\": \"server1\",\n\t\"upstream_url\": \"http://go-server:3000\",\n\t\"uris\":[\"/api/v1\"],\n\t\"strip_uri\": true,\n\t\"preserve_host\": false\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Kong Delete API",
+			"request": {
+				"url": "localhost:8001/apis/myapi",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Kong status",
+			"request": {
+				"url": "localhost:8001/status",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get healthcheck",
+			"request": {
+				"url": "localhost:8000/api/v1/healthcheck",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "server1",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Enable file logging plugin",
+			"request": {
+				"url": "localhost:8001/apis/myapi/plugins",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"file-log\",\n\t\"config.path\":\"/tmp/file.log\"\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Kong enable key auth",
+			"request": {
+				"url": "http://localhost:8001/apis/myapi/plugins",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"key-auth\",\n\t\"config.hide_credentials\" : true\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Kong create consumer",
+			"request": {
+				"url": "http://localhost:8001/consumers/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"johnd\"\n}"
+				},
+				"description": "Generated from a curl request: \ncurl -X POST http://kong:8001/consumers/ \\\n    --data \\\"username=<USERNAME>\\\" \\\n    --data \\\"custom_id=<CUSTOM_ID>\\\""
+			},
+			"response": []
+		},
+		{
+			"name": "Kong Create API Key for Consumer",
+			"request": {
+				"url": "http://localhost:8001/consumers/johnd/key-auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Kong rate limit consumer",
+			"request": {
+				"url": "http://localhost:8001/apis/myapi/plugins",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"rate-limiting\",\n\t\"config.hour\" : \"5000\",\n\t\"consumer_id\" : \"df024acb-5cbd-4e4d-b3ed-751287eafd36\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
