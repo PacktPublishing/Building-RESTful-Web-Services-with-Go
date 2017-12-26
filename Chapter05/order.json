@@ -1,0 +1,18 @@
+{
+	_id: ObjectId(),
+	user: ObjectId("4fcf3eb0ft41ead96110"),
+	state: "cart",
+	item_queue: [{
+		item: ObjectId("59603d3b0f41ead96110cf4f"),
+		quantity: 1,
+		cost: 23
+	}],
+	shipping_address: {
+		type: "work"
+		street: "241 Indian Spring St",
+		city: "Pittsburg",
+		state: "California",
+		pincode: 94565
+	},
+	total: 23, 
+}

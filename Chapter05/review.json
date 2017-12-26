@@ -1,0 +1,16 @@
+{
+	_id: ObjectId("5tcf3eb0ft41ead96110"),
+	product: ObjectId("4fcf3eb0ft41ead96110"),
+	posted_date: new Date(2017, 2, 6),
+	title: "Overall satisfied with product",
+	body: "The product is good and durable. After dry wash, the color hasn't changed much",
+	user: ObjectId(),
+	rating: 4,
+	upvotes: 3,
+	downvotes: 0,
+	upvoters: [ObjectId("41ea5tcf3eb0ftd9233476hg"),
+	           ObjectId("507f1f77bcf86cd799439011"),
+	           ObjectId("54f113fffba522406c9cc20f")
+	          ],
+	downvoters: []
+}

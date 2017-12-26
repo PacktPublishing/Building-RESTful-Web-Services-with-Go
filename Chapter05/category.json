@@ -1,0 +1,16 @@
+{
+	_id: ObjectId("6d3b56900f41ead96110cf4f"),
+	name: "Casual Shirts",
+	description: "All casual shirts for men",
+	slug: "casual-shirts",
+	parent_categories: [{
+		slug: "home"
+		name: "Home",
+		_id: ObjectId("3d3b10f41efad96g110vcf4f"),
+	}, 
+	{
+		slug: "shirts"
+		name: "Shirts",
+		_id: ObjectId("603d3eb0ft41ead96110cf4f"),
+	}]
+}

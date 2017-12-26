@@ -1,0 +1,29 @@
+{
+	_id: ObjectId("59603d3b0f41ead96110cf4f"),
+	sku: 1022,
+	slug: "highlander-shirt-223",
+	name: "Highlander casual shirt",
+	description: "A nice looking casual shirt for men",
+	details: {
+		model_number: 235476,
+		manufacturer: "HighLander",
+		color: "light blue",
+		mfg_date: new Date(2017, 4, 1),
+		size: 40 
+	},
+	reviews: 3,
+	pricing: {
+		cost: 23,
+		retail: 29
+	},
+	categories: {
+		ObjectId("3d3b10f41efad96g110vcf4f"),
+		ObjectId("603d3eb0ft41ead96110cf4f")
+	},
+	tags: ["shirts", "men", "clothing"],
+	reviews: {
+		ObjectId("3bd310f41efad96g110vcf4f"),
+		ObjectId("f4e603d3eb0ft41ead96110c"),
+		ObjectId("96g3bd310f41efad110vcf4g")
+	}
+}
