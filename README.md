@@ -30,9 +30,8 @@ packages, so a working internet connection is required.
 We will also use Docker in the final chapters to explain concepts of API Gateway. Docker
 V17.0+ is recommended. If Windows users have problems with the native Go installation
 for any examples, use Docker for Windows and run Ubuntu container, which gives more
-flexibility; refer to https://www. docker. com/docker-windows for more details.
-Before diving into the book, refresh your language basics at https://tour. golang. org/
-welcome/1.
+flexibility; refer to https://www.docker.com/docker-windows for more details.
+Before diving into the book, refresh your language basics at https://tour.golang.org/welcome/1.
 Even though these are the basic requirements, we will guide you through the installations
 wherever required.
 
