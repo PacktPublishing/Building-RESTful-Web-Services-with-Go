@@ -9,7 +9,7 @@ decade, Go has become more and more popular due to its speed and intuitiveness. 
 verbose code, strict type checking, and support for concurrency make Go a better choice for
 writing any web backend. Some of the best tools, such as Docker and Kubernetes, are
 written in Go. Google uses Go a lot in its daily activities. You can see a list of Go-using
-companies at https://github. com/golang/go/wiki/GoUsers.
+companies at https://github.com/golang/go/wiki/GoUsers.
 ## Instructions and Navigation
 All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
 
