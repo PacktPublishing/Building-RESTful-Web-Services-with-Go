@@ -41,6 +41,3 @@ wherever required.
 * [Building RESTful Web Services with Spring 5 - Second Edition](https://www.packtpub.com/application-development/building-restful-web-services-spring-5-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788475891)
 
 * [Mastering Go](https://www.packtpub.com/networking-and-servers/mastering-go?utm_source=github&utm_medium=repository&utm_campaign=9781788626545)
-
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
